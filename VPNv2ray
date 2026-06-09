@@ -192,12 +192,12 @@
         },
         "tlsSettings": {
           "allowInsecure": true,
-          "serverName": "jonohit.us.ci",
+          "serverName": "www.jonohit.us.ci",
           "show": false
         },
         "wsSettings": {
           "headers": {
-            "Host": "jonohit.us.ci"
+            "Host": "www.jonohit.us.ci"
           },
           "path": "/Mohammad"
         }
