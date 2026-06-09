@@ -48,8 +48,9 @@
         "2a02:6b8::feed:0ff",
         "2a02:6b8:0:1::feed:0ff"
       ],
-      "DE.irancell.cc.cd": "10.10.34.36",
-      "FR.irancell.cc.cd": "10.10.34.36"
+      "DE.dnsok.cc.cd": "188.114.97.6",
+      "FR.dnsok.cc.cd": "188.114.97.6",
+      "UK.dnsok.cc.cd": "188.114.97.6"
     },
     "servers": [
       "1.1.1.1",
@@ -121,7 +122,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "188.114.97.6",
+            "address": "DE.dnsok.cc.cd",
             "port": 443,
             "users": [
               {
@@ -164,11 +165,55 @@
         "concurrency": -1,
         "enabled": false
       },
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "DE.dnsok.cc.cd",
+            "level": 8,
+            "method": "none",
+            "ota": false,
+            "password": "Mohammad",
+            "port": 443
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIP",
+          "happyEyeballs": {
+            "interleave": 2,
+            "maxConcurrentTry": 4,
+            "prioritizeIPv6": true,
+            "tryDelayMs": 250
+          }
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "jonohit.us.ci",
+          "show": false
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "jonohit.us.ci"
+          },
+          "path": "/Mohammad"
+        }
+      },
+      "tag": "proxy-2"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "188.114.97.6",
+            "address": "FR.dnsok.cc.cd",
             "port": 443,
             "users": [
               {
@@ -204,7 +249,51 @@
           "path": "/proxyip=irancell.zone.id"
         }
       },
-      "tag": "proxy-2"
+      "tag": "proxy-3"
+    },
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "shadowsocks",
+      "settings": {
+        "servers": [
+          {
+            "address": "UK.dnsok.cc.cd",
+            "level": 8,
+            "method": "none",
+            "ota": false,
+            "password": "Mohammad_ok",
+            "port": 443
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "sockopt": {
+          "domainStrategy": "UseIP",
+          "happyEyeballs": {
+            "interleave": 2,
+            "maxConcurrentTry": 4,
+            "prioritizeIPv6": true,
+            "tryDelayMs": 250
+          }
+        },
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "www.morning.bbroot.com",
+          "show": false
+        },
+        "wsSettings": {
+          "headers": {
+            "Host": "www.morning.bbroot.com"
+          },
+          "path": "/Mohammad_ok"
+        }
+      },
+      "tag": "proxy-4"
     },
     {
       "protocol": "freedom",
@@ -237,7 +326,7 @@
       "statsOutboundDownlink": true
     }
   },
-  "remarks": "🇩🇪⚡",
+  "remarks": "🇩🇪🇨🇵🇬🇧⚡",
   "routing": {
     "balancers": [
       {
